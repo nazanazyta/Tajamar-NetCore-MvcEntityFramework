@@ -1,0 +1,21 @@
+﻿@model List<Departamento>
+<h1>DI Acceso a Datos</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Departamento dept in Model)
+        {
+            <tr>
+                <td>@dept.Numero</td>
+                <td>@dept.Nombre</td>
+                <td>@dept.Localidad</td>
+            </tr>
+        }
+    </tbody>
+</table>
