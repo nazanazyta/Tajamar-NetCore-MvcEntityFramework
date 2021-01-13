@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nazaret\\source\\repos\\MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj": {}
+    "C:\\Users\\Nazaret\\Repos\\Tajamar-NetCore-MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nazaret\\source\\repos\\MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj": {
+    "C:\\Users\\Nazaret\\Repos\\Tajamar-NetCore-MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nazaret\\source\\repos\\MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj",
+        "projectUniqueName": "C:\\Users\\Nazaret\\Repos\\Tajamar-NetCore-MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj",
         "projectName": "MvcEntityFramework",
-        "projectPath": "C:\\Users\\Nazaret\\source\\repos\\MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj",
+        "projectPath": "C:\\Users\\Nazaret\\Repos\\Tajamar-NetCore-MvcEntityFramework\\MvcEntityFramework\\MvcEntityFramework.csproj",
         "packagesPath": "C:\\Users\\Nazaret\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nazaret\\source\\repos\\MvcEntityFramework\\MvcEntityFramework\\obj\\",
+        "outputPath": "C:\\Users\\Nazaret\\Repos\\Tajamar-NetCore-MvcEntityFramework\\MvcEntityFramework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,6 +44,18 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"

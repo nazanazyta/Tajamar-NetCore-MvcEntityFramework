@@ -1,0 +1,12 @@
+﻿@model Enfermo
+<h1>Detalles Enfermo</h1>
+<br />
+<a asp-controller="Enfermos" asp-action="Index" class="btn btn-warning">Volver a Index</a>
+<br /><br />
+<ul class="list-group">
+    <li class="list-group-item active">@Model.Apellido</li>
+    <li class="list-group-item">Dirección: @Model.Direccion</li>
+    <li class="list-group-item">Fecha de nacimiento: @Model.FechaNacimiento.ToShortDateString()</li>
+    <li class="list-group-item">Sexo: @Model.Sexo</li>
+    <li class="list-group-item">Nº SS: @Model.SeguridadSocial</li>
+</ul>

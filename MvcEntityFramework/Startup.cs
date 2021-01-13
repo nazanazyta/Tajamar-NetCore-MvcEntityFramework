@@ -9,16 +9,42 @@ using System.Linq;
 using System.Threading.Tasks;
 using MvcEntityFramework.Models;
 using MvcEntityFramework.Data;
+using Microsoft.Extensions.Configuration;
+using MvcEntityFramework.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace MvcEntityFramework
 {
     public class Startup
     {
+        //VARIABLE PARA PODER RECUPERAR EL OBJETO DE LA INYECCIÓN
+        IConfiguration Configuration { get; set; }
+        //PARA PODER ACCEDER AL FICHERO appsettings.json
+        //NECESITAMOS REALIZAR INYECCIÓN DE DEPENDENCIAS
+        //EN LA CLASE Startup.cs DE LA INTERFACE IConfiguration
+        public Startup(IConfiguration configuration)
+        {
+            this.Configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            String cadena = "Data Source=localhost;Initial Catalog=HOSPITAL;User ID=sa;Password=MCSD2020";
+            String cadena = Configuration.GetConnectionString("casasqlhospital");
+            services.AddTransient<RepositoryEnfermos>();
+            services.AddDbContext<EnfermosContext>(options => options.UseSqlServer(cadena));
+            //RESOLVEMOS LA DEPENDENCIA PARA EL REPOSITORIO
+            services.AddTransient<RepositoryHospital>();
+            //PARA UTILIZAR CONTEXTOS PUROS DbContext DE Entity Framework
+            //DEBEMOS UTILIZAR UN MÉTODO ESPECIAL PARA IoC QUE ES .AddDbContext
+            services.AddDbContext<HospitalContext>(options =>
+            options.UseSqlServer(cadena));
+            //String cadena = "Data Source=localhost;Initial Catalog=HOSPITAL;User ID=sa;Password=MCSD2020";
+            //String cadena = Configuration.GetConnectionString("casamysqlhospital");
             //services.AddSingleton<IDepartamentosContext, DepartamentosContextSQL>();
-            services.AddSingleton<IDepartamentosContext>(context => new DepartamentosContextSQL(cadena));
+            services.AddSingleton<IDepartamentosContext>(context =>
+                new DepartamentosContextSQL(cadena));
+            //services.AddSingleton<IDepartamentosContext>(context =>
+            //    new DepartamentosContextMySql(cadena));
             //LAS DEPENDENCIAS DE OBJETOS SE RESUELVEN EN LOS SERVICIOS DE LA APP
             //LA PRIMERA OPCIÓN SERÁ UTILIZAR AddTransient<>
             //QUE GENERA UN OBJETO POR CADA PETICIÓN DE INYECCIÓN
