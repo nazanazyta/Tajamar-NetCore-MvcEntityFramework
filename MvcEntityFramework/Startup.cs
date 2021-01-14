@@ -30,6 +30,8 @@ namespace MvcEntityFramework
         public void ConfigureServices(IServiceCollection services)
         {
             String cadena = Configuration.GetConnectionString("casasqlhospital");
+            services.AddTransient<RepositoryEmpleados>();
+            services.AddDbContext<EmpleadosContext>(options => options.UseSqlServer(cadena));
             services.AddTransient<RepositoryEnfermos>();
             services.AddDbContext<EnfermosContext>(options => options.UseSqlServer(cadena));
             //RESOLVEMOS LA DEPENDENCIA PARA EL REPOSITORIO

@@ -1,25 +1,36 @@
 ﻿@model List<Enfermo>
 <h1>Enfermos Linq To SQL</h1>
+<a asp-controller="Enfermos" asp-action="EnfermosGenero">Buscador enfermos Genero</a><br />
+<a asp-controller="Enfermos" asp-action="InsertarEnfermo">Insertar nuevo</a><br />
 <table class="table table-info">
     <thead>
         <tr>
             <th>Apellido</th>
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (Enfermo enf in Model)
         {
-            <tr>
-                <td>@enf.Apellido</td>
-                <td>
-                    @Html.ActionLink("Detalles", "Details", "Enfermos"
-                        , new { idinscripcion = enf.Inscripcion })
-                    <a asp-action="Details" asp-controller="Enfermos" 
-                       asp-route-idinscripcion="@enf.Inscripcion"
-                       class="btn btn-success">Detalles</a>
-                </td>
-            </tr>
+        <tr>
+            <td>@enf.Apellido</td>
+            <td>
+                @*@Html.ActionLink("Detalles", "Details", "Enfermos"
+            , new { idinscripcion = enf.Inscripcion }, new { @class = "btn btn-success" })*@
+                <a asp-action="Details" asp-controller="Enfermos"
+                   asp-route-idinscripcion="@enf.Inscripcion" class="btn btn-info">Detalles</a>
+            </td>
+            <td>
+                <a asp-action="UpdateEnfermo" asp-controller="Enfermos"
+                   asp-route-inscripcion="@enf.Inscripcion" class="btn btn-primary">Modificar</a>
+            </td>
+            <td>
+                <a asp-action="EliminarEnfermo" asp-controller="Enfermos"
+                   asp-route-inscripcion="@enf.Inscripcion" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

@@ -1,0 +1,30 @@
+﻿@model List<Enfermo>
+
+@{
+    List<Genero> generos = ViewData["GENEROS"] as List<Genero>;
+}
+
+<h1>Buscador enfermos genero</h1>
+
+<ul class="list-group">
+    @foreach (Genero gen in generos)
+    {
+        <li class="list-group-item">
+            <a asp-controller="Enfermos"
+               asp-action="EnfermosGenero"
+               asp-route-genero="@gen.Value">@gen.Text</a>
+        </li>
+    }
+</ul>
+<hr />
+@if (Model != null)
+{
+    <ul class="list-group">
+        @foreach (Enfermo enf in Model)
+        {
+            <li class="list-group-item active">
+                @enf.Apellido
+            </li>
+        }
+    </ul>
+}

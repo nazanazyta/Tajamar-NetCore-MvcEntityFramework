@@ -1,0 +1,26 @@
+﻿@model Enfermo 
+<h1>Modificar enfermo</h1>
+<form method="post" class="form-group">
+    <input type="hidden" name="inscripcion" class="form-control"
+           value="@Model.Inscripcion" /><br />
+    <label> Apellido: </label>
+    <input type="text" name="apellido" class="form-control"
+           value="@Model.Apellido" /><br />
+    <label> Direccion: </label>
+    <input type="text" name="direccion" class="form-control"
+           value="@Model.Direccion" /><br />
+    <label> Fecha Nacimiento: </label>
+    <input type="text" name="FechaNacimiento" class="form-control"
+           value="@Model.FechaNacimiento.ToShortDateString()" /><br />
+    <label> Sexo: </label>
+    @*<select name="sexo" class="form-select">
+        <option value="F"> FEMENINO </option>
+        <option value="M"> MASCULINO </option>
+    </select>*@
+    <input type="text" name="sexo" class="form-control"
+            value="@Model.Sexo" /><br />
+    <label> Seguridad Social: </label>
+    <input type="text" name="seguridadsocial" class="form-control"
+           value="@Model.SeguridadSocial" /><br />
+    <button type="submit" class="btn btn-info"> Modificar </button>
+</form>
