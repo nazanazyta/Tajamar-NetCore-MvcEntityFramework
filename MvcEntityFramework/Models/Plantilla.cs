@@ -7,20 +7,17 @@ using System.Threading.Tasks;
 
 namespace MvcEntityFramework.Models
 {
-    [Table("emp")]
-    public class Empleado
+    [Table("plantilla")]
+    public class Plantilla
     {
         [Key]
-        [Column("emp_no")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Column("empleado_no")]
         public int IdEmpleado { get; set; }
         [Column("apellido")]
         public String Apellido { get; set; }
-        [Column("Oficio")]
-        public String Oficio { get; set; }
+        [Column("funcion")]
+        public String Funcion { get; set; }
         [Column("salario")]
         public int Salario { get; set; }
-        [Column("dept_no")]
-        public int Departamento { get; set; }
     }
 }

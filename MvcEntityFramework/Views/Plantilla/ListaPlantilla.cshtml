@@ -1,0 +1,23 @@
+﻿@model List<Plantilla> 
+<h1>Lista</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>IdEmpleado</th>
+            <th>Apellido</th>
+            <th>Función</th>
+            <th>Salario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Plantilla plan in Model)
+        {
+            <tr>
+                <td>@plan.IdEmpleado</td>
+                <td>@plan.Apellido</td>
+                <td>@plan.Funcion</td>
+                <td>@plan.Salario</td>
+            </tr>
+        }
+    </tbody>
+</table>

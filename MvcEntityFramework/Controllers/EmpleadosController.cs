@@ -19,6 +19,11 @@ namespace MvcEntityFramework.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult IncrementarSalarios()
+        {
             List<Empleado> empleados = this.repo.GetEmpleados();
             List<String> oficios = this.repo.GetOficios();
             ViewData["oficios"] = oficios;
@@ -26,13 +31,25 @@ namespace MvcEntityFramework.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(String oficio, int incremento)
+        public IActionResult IncrementarSalarios(String oficio, int incremento)
         {
-            this.repo.IncrementarSalario(oficio, incremento);
             List<Empleado> empleados = this.repo.GetEmpleadosOficio(oficio);
+            this.repo.IncrementarSalariosOficio(oficio, incremento);
             List<String> oficios = this.repo.GetOficios();
             ViewData["oficios"] = oficios;
             return View(empleados);
+        }
+
+        public IActionResult EmpleadosDepartamentoLambda()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EmpleadosDepartamentoLambda(int dept)
+        {
+            ResumenDepartamento model = this.repo.GetResumenDepartamento(dept);
+            return View(model);
         }
     }
 }

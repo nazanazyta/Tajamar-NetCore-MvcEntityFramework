@@ -40,6 +40,7 @@ namespace MvcEntityFramework
             //DEBEMOS UTILIZAR UN MÉTODO ESPECIAL PARA IoC QUE ES .AddDbContext
             services.AddDbContext<HospitalContext>(options =>
             options.UseSqlServer(cadena));
+            services.AddTransient<RepositoryPlantilla>();
             //String cadena = "Data Source=localhost;Initial Catalog=HOSPITAL;User ID=sa;Password=MCSD2020";
             //String cadena = Configuration.GetConnectionString("casamysqlhospital");
             //services.AddSingleton<IDepartamentosContext, DepartamentosContextSQL>();

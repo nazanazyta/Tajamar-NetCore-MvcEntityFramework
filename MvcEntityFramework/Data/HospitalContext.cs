@@ -11,11 +11,12 @@ namespace MvcEntityFramework.Data
     {
         //TENDRÁ UN CONSTRUCTOR OBLIGATORIO
         //CON OPTIONS PARA EL CONTEXT
-        public HospitalContext(DbContextOptions options)
+        public HospitalContext(DbContextOptions<HospitalContext> options)
             :base(options)
         {}
         //DEBEMOS MAPEAR CON DbSet CADA ENTIDAD PARA
         //QUE SEA ACCESIBLE (OBLIGATORIO PROPIEDADES)
         public DbSet<Hospital> Hospitales { get; set; }
+        public DbSet<Plantilla> Plantilla { get; set; }
     }
 }

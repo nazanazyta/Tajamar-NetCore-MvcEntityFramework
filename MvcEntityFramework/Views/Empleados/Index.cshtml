@@ -1,37 +1,9 @@
-﻿@model List<Empleado>
-@{ 
-    List<String> oficios = ViewData["oficios"] as List<String>;
-}
-<h1>Incrementar salarios</h1>
-<form method="post">
-    <select name="oficio">
-        @foreach (String ofi in oficios)
-        {
-            <option value="@ofi">@ofi</option>
-        }
-    </select>
-    <input type="text" name="incremento" class="form-control" /><br />
-    <button type="submit" class="btn btn-primary">Incrementar salarios</button>
-</form>
-
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Apellido</th>
-            <th>Oficio</th>
-            <th>Salario</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Empleado emp in Model)
-        {
-            <tr>
-                <td>@emp.IdEmpleado</td>
-                <td>@emp.Apellido</td>
-                <td>@emp.Oficio</td>
-                <td>@emp.Salario</td>
-            </tr>
-        }
-    </tbody>
-</table>
+﻿<h1>Menú empleados</h1>
+<ul class="list-group">
+    <li class="list-group-item">
+        <a class="nav-link" asp-action="IncrementarSalarios" asp-controller="Empleados">Incrementar salarios</a>
+    </li>
+    <li class="list-group-item">
+        <a class="nav-link" asp-action="EmpleadosDepartamentoLambda" asp-controller="Empleados">Buscar por departamento</a>
+    </li>
+</ul>

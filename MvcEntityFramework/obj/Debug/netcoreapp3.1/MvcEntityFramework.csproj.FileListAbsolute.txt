@@ -140,3 +140,8 @@ C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Enfermos\InsertarEnfermo.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Enfermos\UpdateEnfermo.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\Index.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\IncrementarSalarios.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Empleados\EmpleadosDepartamentoLambda.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\Index.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\ListaPlantilla.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\PlantillaSalario.cshtml.g.cs
