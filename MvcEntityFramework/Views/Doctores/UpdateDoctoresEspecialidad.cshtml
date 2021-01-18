@@ -1,0 +1,20 @@
+﻿@model List<Doctor>
+<h1>Modificar especialidad Doctor</h1>  
+<form method="post">
+    <label>Id doctor</label>
+    <input type="number" class="form-control" name="iddoctor" /><br />
+    <label>Nueva especialidad</label>
+    <input type="text" class="form-control" name="especialidad" /><br />
+    <button type="submit" class="btn-info">Modificar doctor</button>
+</form>
+<hr />
+<table class="table table-bordered">
+    @foreach(Doctor doc in Model)
+    {
+        <tr>
+            <td>@doc.IDoctor</td>
+            <td>@doc.Apellido
+            <td>@doc.Especialidad</td>
+        </tr>
+    }
+</table>

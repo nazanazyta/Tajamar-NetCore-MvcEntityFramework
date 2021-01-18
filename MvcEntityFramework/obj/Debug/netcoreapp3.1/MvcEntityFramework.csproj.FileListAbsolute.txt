@@ -145,3 +145,6 @@ C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\Index.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\ListaPlantilla.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Plantilla\PlantillaSalario.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\Index.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\UpdateDoctoresEspecialidad.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\UpdateDoctoresSalario.cshtml.g.cs

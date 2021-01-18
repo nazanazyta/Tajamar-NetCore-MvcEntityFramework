@@ -1,0 +1,38 @@
+﻿@model List<Doctor>
+@{
+    List<String> especialidades = ViewData["especialidades"] as List<String>;
+}
+<a asp-controller="Doctores" asp-action="Index" class="btn btn-info">Volver al Index</a>
+<a asp-controller="Doctores" asp-action="UpdateDoctoresSalario" class="btn btn-primary">Volver a lista</a>
+<h1>Modificar salario Doctor</h1>
+<form method="post">
+    <label>Especialidad</label>
+    <select name="especialidad" class="form-control">
+        @foreach (String espe in especialidades)
+        {
+            <option value="@espe">@espe</option>
+        }
+    </select><br />
+    <label>Aumento: </label>
+    <input type="number" class="form-control" name="cantidad" /><br />
+    <button type="submit" class="btn-primary">Aumentar salarios</button>
+</form>
+<br />
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Salario</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    @foreach (Doctor doc in Model)
+    {
+        <tr>
+            <td>@doc.Apellido</td>
+            <td>@doc.Especialidad</td>
+            <td>@doc.Salario</td>
+        </tr>
+    }
+</table>
