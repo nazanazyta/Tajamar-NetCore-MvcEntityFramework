@@ -1,0 +1,41 @@
+﻿@model List<String>
+@{ 
+    ProcedimientoTodosEmpleados proc = ViewData["datos"] as ProcedimientoTodosEmpleados;
+}
+<h1>TODOS</h1> 
+<form method="post">
+    <label>Departamento/Hospital</label>
+    <select name="nombre" class="form-control">
+        @foreach (String nom in Model)
+        {
+            <option name="@nom">@nom</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+@if(proc != null)
+{
+    <h2>Suma: @proc.SumaSalarial</h2>
+    <h2>Media: @proc.MediaSalarial</h2>
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Función</th>
+                <th>Salario</th>
+                <th>Hosp/Dept</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TodosEmpleados emp in proc.Empleados)
+            {
+                <tr>
+                    <td>@emp.Apellido</td>
+                    <td>@emp.Funcion</td>
+                    <td>@emp.Salario</td>
+                    <td>@emp.Nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

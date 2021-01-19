@@ -28,6 +28,8 @@ namespace MvcEntityFramework.Data
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Plantilla> Plantilla { get; set; }
         public DbSet<Doctor> Doctores { get; set; }
+        public DbSet<EmpleadoHospital> EmpleadosHospital { get; set; }
+        public DbSet<TodosEmpleados> TodosEmpleados { get; set; }
         
         //CREAMOS EL PRIMER PROCEDIMIENTO DE ACCIÓN
         public void ModificarEspecialidad(int iddoctor, String espe)

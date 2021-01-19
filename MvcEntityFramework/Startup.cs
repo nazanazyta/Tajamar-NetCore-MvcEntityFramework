@@ -42,6 +42,8 @@ namespace MvcEntityFramework
             options.UseSqlServer(cadena));
             services.AddTransient<RepositoryPlantilla>();
             services.AddTransient<RepositoryDoctores>();
+            services.AddTransient<RepositoryEmpleadosHospital>();
+            services.AddTransient<RepositoryTodosEmpleados>();
             //String cadena = "Data Source=localhost;Initial Catalog=HOSPITAL;User ID=sa;Password=MCSD2020";
             //String cadena = Configuration.GetConnectionString("casamysqlhospital");
             //services.AddSingleton<IDepartamentosContext, DepartamentosContextSQL>();

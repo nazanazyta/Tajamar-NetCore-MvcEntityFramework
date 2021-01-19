@@ -148,3 +148,6 @@ C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\Index.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\UpdateDoctoresEspecialidad.cshtml.g.cs
 C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Doctores\UpdateDoctoresSalario.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\EmpleadosHospital\Index.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\EmpleadosHospital\ProcedimientoEmpleadosHospital.cshtml.g.cs
+C:\Users\Nazaret\Repos\Tajamar-NetCore-MvcEntityFramework\MvcEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\TodosEmpleados\Index.cshtml.g.cs
